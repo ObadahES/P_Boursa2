@@ -19,7 +19,4 @@ app.listen(port, () => console.log(" Server Is Working On " + port + " ... "));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cookieParser());
-// app.use("/api", require("./Routes/Routes"));
-app.get("/", (req, res) => {
-  res.send("Server is up 🚀");
-});
+app.use("/api", require("./Routes/Routes"));
